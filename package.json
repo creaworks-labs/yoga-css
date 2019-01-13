@@ -1,0 +1,46 @@
+{
+	"name": "yoga-css",
+	"version": "0.0.2",
+	"description": "A CSS based polyfill for the Yoga Layout. Yoga is a cross-platform layout engine which implements Flexbox.",
+	"author": "Ömer Düzyol <omer@duzyol.net>",
+	"license": "MIT",
+	"main": "yoga.css",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/creaworks-labs/yoga-css"
+	},
+	"bugs": {
+		"url": "https://github.com/creaworks-labs/yoga-css/issues"
+	},
+	"homepage": "https://github.com/creaworks-labs/yoga-css",
+	"keywords": [
+		"yoga-layout",
+		"react-native-web",
+		"css-in-react",
+		"css-in-js",
+		"react"
+	],
+	"engines": {
+		"node": ">=6.0.0"
+	},
+	"devDependencies": {
+		"@csstools/postcss-sass": "^3.0.0",
+		"autoprefixer": "^9.4.5",
+		"cssnano": "^4.1.8",
+		"postcss": "^7.0.11",
+		"postcss-cli": "^6.1.1",
+		"rimraf": "^2.6.3"
+	},
+	"scripts": {
+		"deploy": "yarn build",
+		"start": "yarn build:dev",
+		"clean": "rimraf css dev",
+		"build": "postcss src/index.scss --config postcss.config.js --output css/yoga.css",
+		"build:dev": "postcss src/index.scss --config postcss.dev.config.js --output dev/yoga.css --watch",
+		"prepare": "yarn deploy"
+	},
+	"dependencies": {},
+	"files": [
+		"css"
+	]
+}
