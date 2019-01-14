@@ -4,7 +4,7 @@
 	"description": "A CSS based polyfill for the Yoga Layout. Yoga is a cross-platform layout engine which implements Flexbox.",
 	"author": "Ömer Düzyol <omer@duzyol.net>",
 	"license": "MIT",
-	"main": "yoga.css",
+	"main": "/css/yoga.css",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/creaworks-labs/yoga-css"
